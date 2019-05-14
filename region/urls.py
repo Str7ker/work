@@ -26,6 +26,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from company import views
+from django.contrib import admin
 from django.urls import path
 from company.views import *
 from cargos.views import *
@@ -44,4 +45,5 @@ urlpatterns = [
     path('conf/', Confirmations.as_view()),
     path('newpersonal/', NewPersonal.as_view()),
     path('personalarea/', Personalareas.as_view()),
+    path('admin/', admin.site.urls),
 ]
