@@ -4,6 +4,8 @@ import Main from './views/Main.vue'
 import Cargos from './views/Cargos'
 import Company from './views/Company'
 import Page from './views/Page'
+import Pagehome from './views/Pagehome'
+import Services from './views/Services'
 
 Vue.use(Router)
 
@@ -38,6 +40,16 @@ export default new Router({
       path: '/',
       name: 'page',
       component: Page
+    },
+    {
+      path: '/pagehome',
+      name: 'page',
+      component: Pagehome
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: Services
     },
   ]
 })

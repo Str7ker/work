@@ -42,6 +42,7 @@
             <!--      <Home/>-->
             <router-view></router-view>
 <!--            <Main/>-->
+                <Page/>
         </v-content>
     </v-app>
 </template>
@@ -51,9 +52,11 @@
 import Main from './views/Main'
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbvue/build/css/mdb.css'
+import Page from './views/Page'
 export default {
   name: 'App',
   components: {
+    Page,
     Main
   },
   data () {
