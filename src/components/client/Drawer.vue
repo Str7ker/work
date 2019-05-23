@@ -80,14 +80,14 @@ export default {
       //   text: 'Главная'
       // },
       {
-        to: '/user-profile',
+        to: '',
         icon: 'mdi-account',
-        text: 'Мой профиль'
+        text: 'Главная'
       },
       {
         to: '/table-list',
         icon: 'mdi-car',
-        text: 'Мои грузы'
+        text: 'Услуги'
       },
       // {
       //   to: '/typography',
@@ -102,7 +102,7 @@ export default {
       {
         to: '/maps',
         icon: 'mdi-map-marker',
-        text: 'Карта'
+        text: 'Оставить заявку'
       },
       // {
       //   to: '/notifications',
@@ -112,7 +112,7 @@ export default {
       {
         to: '',
         icon: 'mdi-exit-to-app',
-        text: 'Выйти'
+        text: 'Войти'
       }
     ],
     responsive: false

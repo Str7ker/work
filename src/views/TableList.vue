@@ -13,13 +13,20 @@
       >
         <material-card
           color="green"
-          title="Simple Table"
-          text="Here is a subtitle for this table"
+          title="Грузы"
+          text="Здесь находятся все Ваши грузы:"
         >
+          <v-text-field
+                  v-model="search"
+                  append-icon="mdi-search"
+                  label="Поиск"
+                  single-line
+                  hide-details
+          ></v-text-field>
           <v-data-table
             :headers="headers"
             :items="items"
-            hide-actions
+            :search="search"
           >
             <template
               slot="headerCell"
@@ -35,44 +42,10 @@
               slot-scope="{ item }"
             >
               <td>{{ item.name }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
-            </template>
-          </v-data-table>
-        </material-card>
-      </v-flex>
-      <v-flex
-        md12
-      >
-        <material-card
-          color="green"
-          flat
-          full-width
-          title="Table on Plain Background"
-          text="Here is a subtitle for this table"
-        >
-          <v-data-table
-            :headers="headers"
-            :items="items.slice(0, 7)"
-            hide-actions
-          >
-            <template
-              slot="headerCell"
-              slot-scope="{ header }"
-            >
-              <span
-                class="subheading font-weight-light text--darken-3"
-                v-text="header.text"
-              />
-            </template>
-            <template
-              slot="items"
-              slot-scope="{ item }"
-            >
-              <td>{{ item.name }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
+              <td>{{ item.at }}</td>
+              <td>{{ item.volume }}</td>
+              <td>{{ item.data }}</td>
+              <td>{{ item.status }}</td>
               <td class="text-xs-right">{{ item.salary }}</td>
             </template>
           </v-data-table>
@@ -85,63 +58,60 @@
 <script>
 export default {
   data: () => ({
+    search: '',
     headers: [
       {
+        text: 'Название груза',
+        align: 'left',
         sortable: false,
-        text: 'Name',
         value: 'name'
       },
-      {
-        sortable: false,
-        text: 'Country',
-        value: 'country'
-      },
-      {
-        sortable: false,
-        text: 'City',
-        value: 'city'
-      },
-      {
-        sortable: false,
-        text: 'Salary',
-        value: 'salary',
-        align: 'right'
-      }
+      { text: 'Вес (кг)', value: 'at' },
+      { text: 'Объём (м)', value: 'volume' },
+      { text: 'Дата заказа', value: 'data' },
+      { text: 'Статус', value: 'status' },
     ],
     items: [
       {
-        name: 'Dakota Rice',
-        country: 'Niger',
-        city: 'Oud-Tunrhout',
-        salary: '$35,738'
+        name: 'Диван',
+        at: 20,
+        volume: 6,
+        data: '01.05.2019',
+        status: 'Доставлено',
       },
       {
-        name: 'Minerva Hooper',
-        country: 'Curaçao',
-        city: 'Sinaai-Waas',
-        salary: '$23,738'
-      }, {
-        name: 'Sage Rodriguez',
-        country: 'Netherlands',
-        city: 'Overland Park',
-        salary: '$56,142'
-      }, {
-        name: 'Philip Chanley',
-        country: 'Korea, South',
-        city: 'Gloucester',
-        salary: '$38,735'
-      }, {
-        name: 'Doris Greene',
-        country: 'Malawi',
-        city: 'Feldkirchen in Kārnten',
-        salary: '$63,542'
-      }, {
-        name: 'Mason Porter',
-        country: 'Chile',
-        city: 'Gloucester',
-        salary: '$78,615'
-      }
+        name: 'Шкаф',
+        at: 30,
+        volume: 9,
+        data: '02.05.2019',
+        status: 'Доставлено',
+      },
+      {
+        name: 'Стол',
+        at: 5,
+        volume: 5,
+        data: '04.05.2019',
+        status: 'Ожидает отправление',
+      },
+      {
+        name: 'Холодильник',
+        at: 20,
+        volume: 2.5,
+        data: '06.05.2019',
+        status: 'В пути',
+      },
+      {
+        name: 'Плита',
+        at: 20,
+        volume: 1,
+        data: '10.09.2019',
+        status: 'В пути',
+      },
     ]
   })
 }
 </script>
+
+<style>
+
+</style>

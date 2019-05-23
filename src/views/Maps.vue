@@ -2,16 +2,7 @@
   <div>
     <div class="mapouter">
       <div class="gmap_canvas">
-        <iframe
-          id="gmap_canvas"
-          width="100%"
-          height="100%"
-          src="https://maps.google.com/maps?q=google&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-        />
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A06ff42df4b9d7a561d5d434cc1b55f5519573aeaa2fd4217b81c5b6f595f87f8&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
       </div>
     </div>
   </div>

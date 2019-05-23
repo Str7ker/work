@@ -5,6 +5,11 @@
  */
 export default [
   {
+    path: '/',
+    name: 'Главная',
+    view: 'Main'
+  },
+  {
     path: '/dashboard',
     name: 'Главная',
     // Relative to /src/views
@@ -30,6 +35,7 @@ export default [
   },
   {
     path: '/maps',
+    name: 'Карта',
     view: 'Maps'
   },
   {

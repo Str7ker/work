@@ -7,6 +7,10 @@
     <core-drawer />
 
     <core-view />
+
+<!--    <client-toolbar/>-->
+<!--    <client-drawer/>-->
+<!--    <client-filter/>-->
   </v-app>
 </template>
 
